@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button id="menuButton" class="btn nav-link"></button>
+              <ul id="menu" class="dropdown-menu" style="display:none;">
+                <li><a class="dropdown-item" href="cart.html">Mi Carrito</a></li>
+                <hr>
+                <li><a class="dropdown-item" href="my-profile.html">Mi Perfil</a></li>
+                <hr>
+                <li><a class="dropdown-item" href="#" id="menuLogoutClick">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+          </li>
+          <!--Boton modo-->
+          <li>
+            <button class="switch" id="switch">
+              <span><i class="fas fa-moon"></i></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Botones filtro-->
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col text-end">
+        <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+          <input type="radio" class="btn-check" name="options" id="sortDescPrice" checked>
+          <label class="btn btn-light" for="sortDescPrice"><i class="fas fa-sort-amount-down mr-1"></i>$</label>
+          <input type="radio" class="btn-check" name="options" id="sortAscPrice" checked>
+          <label class="btn btn-light" for="sortAscPrice"><i class="fas fa-sort-amount-up mr-1"></i>$</label>
+          <input type="radio" class="btn-check" name="options" id="sortByRel" checked>
+          <label class="btn btn-light" for="sortByRel"><i class="fas fa-sort-amount-down mr-1"></i>Rel.</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="">
+        <div class="row container p-0 m-0">
+          <div class="col-sm-12 col-xl-4 col-xxl-4 col-lg-4 col-md-4">
+            <form class="form-control">
+              <li class="input-group ">
+                <input type="search" name="search" placeholder="Buscar..." id="buscador">
+              </li>
+            </form>
+          </div>
+          <div class="col">
+            <p class="font-weight-normal text-end my-2">Precio</p>
+          </div>
+          <div class="col">
+            <input class="form-control rangePrice" type="number" placeholder="min." id="rangeFilterPriceMin">
+          </div>
+          <div class="col">
+            <input class="form-control rangePrice" type="number" placeholder="máx." id="rangeFilterPriceMax">
+          </div>
+          <div class="col-auto p-0">
+            <div class="btn-group" role="group">
+              <button class="btn btn-light btn-block" id="rangeFilterPrice">Filtrar</button>
+              <button class="btn btn-link btn-sm" id="clearRangeFilterPrice">Limpiar</button>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!--fin filtro-->
+  <main class="pb-5 container">
+    <div class="container" >
+      <div class="product-info" id="products" >
+              
+      </div>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/products.js"></script>
+</body>
+
+</html>
